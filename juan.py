@@ -42,7 +42,7 @@ def peliculas():
         print("Incorrecto")
         cont_error += 1
         
-    porc = (cont * 100) / 5
+    porc = (cont * 100) / (cont + cont_error)
     print(f"Los aciertos que tuviste fueron: {cont}")
     print(f"Los errores fueron: {cont_error}")
     print(f"El porcentaje de acierto es de: {porc}%")
