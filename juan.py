@@ -9,6 +9,7 @@ def peliculas():
     else:
         print("Incorrecto")
         cont_error += 1
+    print("\033[H\033[J", end="")
     print("Pregunta 2")
     opcion = input("Un barco choca contra un iceberg: \n1-Frozen \n2-Avatar \n3-Titanic\n")
     if opcion == "3":
@@ -17,6 +18,7 @@ def peliculas():
     else:
         print("Incorrecto")
         cont_error += 1
+    print("\033[H\033[J", end="")
     print("Pregunta 3")
     opcion = input("Un grupo de superhéroes se une para derrotar a Thanos: \n1- Batman \n2-Avengers Endgame \n3-Toy Story\n")
     if opcion == "2":
@@ -25,6 +27,7 @@ def peliculas():
     else:
         print("Incorrecto")
         cont_error += 1
+    print("\033[H\033[J", end="")
     print("Pregunta 4")
     opcion = input("Un pez payaso busca a su hijo perdido en el océano: \n1-Buscando a Nemo \n2-Cars \n3-Ratatouille\n")
     if opcion == "1":
@@ -33,6 +36,7 @@ def peliculas():
     else:
         print("Incorrecto")
         cont_error += 1
+    print("\033[H\033[J", end="")
     print("Pregunta 5")
     opcion = input("Un chef es en realidad una rata que cocina en París: \n1-Ratatouille \n2-Coco \n3-Intensamente\n")
     if opcion == "1":
@@ -41,10 +45,9 @@ def peliculas():
     else:
         print("Incorrecto")
         cont_error += 1
-        
+    
+    print("\033[H\033[J", end="")
     porc = (cont * 100) / (cont + cont_error)
     print(f"Los aciertos que tuviste fueron: {cont}")
     print(f"Los errores fueron: {cont_error}")
     print(f"El porcentaje de acierto es de: {porc}%")
-    
-peliculas()
