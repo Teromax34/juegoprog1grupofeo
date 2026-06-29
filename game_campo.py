@@ -77,5 +77,4 @@ def campo():
 
     print("\nResultado final")
     print(f"Puntos: {puntos}/80")
-
-campo()
+    return int(puntos)

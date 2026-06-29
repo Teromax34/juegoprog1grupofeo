@@ -46,11 +46,14 @@ def responder(op):
     cargar()
 
 def finalizar():
+    # Deshabilitar los botones para que no se puedan seguir apretando
+    for b in botones:
+        b.config(state="disabled", command=lambda: None)
     if puntaje>=7:
-        txt=f"¡Ganaste!\nPuntaje: {puntaje}/10"
+        txt=f"¡Ganaste! Puntaje: {puntaje}/10"
     else:
-        txt=f"Perdiste.\nPuntaje: {puntaje}/10"
-    messagebox.showinfo("Resultado",txt)
+        txt=f"Perdiste. Puntaje: {puntaje}/10"
+    print(txt)
     ventana.destroy()
 
 def iniciar_juego():
@@ -78,6 +81,7 @@ def iniciar_juego():
         botones.append(b)
     cargar()
     ventana.mainloop()
+    return puntaje
 
 if __name__=="__main__":
     iniciar_juego()

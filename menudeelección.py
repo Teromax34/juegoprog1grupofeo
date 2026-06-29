@@ -2,6 +2,7 @@ import os
 import juan                    # juego de Juan
 import piedrapapertijera       # juego de Agustin
 import geografia               # juego de Clara
+import game_campo              # juego de Santi
 
 ARCHIVO = "puntajes.txt"
 
@@ -105,8 +106,7 @@ while opcion != 5:
             agregarScore("geografiaTrivia", nombrePlayer, newScore)
         case 3:
             print("\033[H\033[J", end="")
-            # newScore = tercerjuego.iniciar()
-            newScore = 0
+            newScore = game_campo.campo()
             agregarScore("tercerjuegosecreto", nombrePlayer, newScore)
         case 4:
             print("\033[H\033[J", end="")

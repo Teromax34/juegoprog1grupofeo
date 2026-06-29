@@ -51,3 +51,4 @@ def peliculas():
     print(f"Los aciertos que tuviste fueron: {cont}")
     print(f"Los errores fueron: {cont_error}")
     print(f"El porcentaje de acierto es de: {porc}%")
+    return cont
